@@ -1,6 +1,6 @@
-# 21 MERN: Book Search Engine
+## MERN: Book Search Engine
 
-## Your Task
+## Description:
 
 Your assignment this week is emblematic of the fact that most modern websites are driven by two things: data and user demands. This shouldn't come as a surprise, as the ability to personalize user data is the cornerstone of real-world web development today. And as user demands evolve, applications need to be more performant.
 
@@ -29,63 +29,80 @@ In order for this application to use a GraphQL API, you’ll need to refactor th
 You’ll need to complete the following tasks in each of these back-end files:
 
 * `auth.js`: Update the auth middleware function to work with the GraphQL API.
-
 * `server.js`: Implement the Apollo Server and apply it to the Express server as middleware.
-
 * `Schemas` directory:
-
 	* `index.js`: Export your typeDefs and resolvers.
-
 	* `resolvers.js`: Define the query and mutation functionality to work with the Mongoose models.
-
 		**Hint**: Use the functionality in the `user-controller.js` as a guide.
-
 	* `typeDefs.js`: Define the necessary `Query` and `Mutation` types:
-
 		* `Query` type:
-
 			* `me`: Which returns a `User` type.
-		
 		* `Mutation` type:
-
 			* `login`: Accepts an email and password as parameters; returns an `Auth` type.
-
 			* `addUser`: Accepts a username, email, and password as parameters; returns an `Auth` type.
-
 			* `saveBook`: Accepts a book author's array, description, title, bookId, image, and link as parameters; returns a `User` type. (Look into creating what's known as an `input` type to handle all of these parameters!)
-
 			* `removeBook`: Accepts a book's `bookId` as a parameter; returns a `User` type.
-			
 		* `User` type:
-
 			* `_id`
-
 			* `username`
-
 			* `email`
-
 			* `bookCount`
-
 			* `savedBooks` (This will be an array of the `Book` type.)
-
 		* `Book` type:
-
 			* `bookId` (Not the `_id`, but the book's `id` value returned from Google's Book API.)
-
 			* `authors` (An array of strings, as there may be more than one author.)
-
 			* `description`
-
 			* `title`
-
 			* `image`
-
 			* `link`
-
 		* `Auth` type:
-
 			* `token`
-
 			* `user` (References the `User` type.)
 
+## Scripts: 
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Contributing
+David Gavino
+
+## Deploy Link
 https://googlebookssesrch.herokuapp.com/
