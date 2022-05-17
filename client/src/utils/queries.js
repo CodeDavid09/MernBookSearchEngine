@@ -1,7 +1,8 @@
-import { gql } from "@apollo/client";
+import gql from 'graphql-tag';
+
 
 export const GET_ME = gql`
-  {
+{
     me {
       _id
       username
@@ -11,9 +12,9 @@ export const GET_ME = gql`
         bookId
         authors
         image
-        description
-        title
         link
+        title
+        description
       }
     }
   }
